@@ -8,7 +8,8 @@ public class Transition {
 	private ArrayList< Arc > output;
 	
 	public Transition() {
-		
+		input = new ArrayList<>();
+		output = new ArrayList<>();
 	}
 	public void addInput( Arc arc){
 		input.add(arc);

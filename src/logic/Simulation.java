@@ -1,7 +1,13 @@
 package logic;
 import java.util.ArrayList;
 import model.*;
-
+/**
+ * 
+ * @author xdanielsb et gsanyas
+ * @version 1.0
+ * This project simulates a  configurable network of Petri 
+ *
+ */
 public class Simulation {
 	private ArrayList< Arc> arcs;
 	private ArrayList< Place> places;

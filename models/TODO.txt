@@ -1,0 +1,2 @@
+- there are possible transitions activables, so we must create a way to execute the transition in random order. 
+

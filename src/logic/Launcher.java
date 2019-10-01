@@ -1,5 +1,4 @@
 package logic;
-
 import model.*;
 
 public class Launcher {
