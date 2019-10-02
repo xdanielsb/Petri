@@ -35,4 +35,14 @@ public class Transition {
 			System.out.println( "Hey!, It is not possible to exec this transition.");
 		}
 	}
+	@Override
+	public String toString() {
+		String desc, in="Input [  ", out="Output = [";
+		for( Arc arc: input) in += arc.toString();
+		in += "]\n";
+		for( Arc arc: output) out += arc.toString();
+		out += "]\n";
+		desc = in + out;
+		return desc;
+	}
 }

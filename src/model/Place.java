@@ -13,6 +13,8 @@ public class Place {
 	}
 	public void decreaseJeton(int numJetons) {
 		this.numJetons -= numJetons;
+		this.numJetons = Math.max(0, this.numJetons);
 	}
+	
 	
 }

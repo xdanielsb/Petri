@@ -1,5 +1,7 @@
 package logic;
 import java.util.ArrayList;
+import java.util.Collections;
+
 import model.*;
 /**
  * 
@@ -8,22 +10,27 @@ import model.*;
  * This project simulates a  configurable network of Petri 
  *
  */
-public class Simulation {
+public class SimulationPetriNet {
 	private ArrayList< Arc> arcs;
 	private ArrayList< Place> places;
 	private ArrayList < Transition> trans;
 	
-	public Simulation() {
+	public SimulationPetriNet() {
 		trans = new ArrayList<>();
 	}
 	
-	public void start() {
+	public void runAllTransitions() {
 		System.out.println("The simulation has started...");
 		boolean isPossible;
 		do {
 			isPossible = false;
+			//Show the simulation
+			System.out.println("-------------------------------");
+			System.out.println(this.toString());
+			//Collections.shuffle(trans);
 			int random = (int) Math.random()*trans.size() ;
 			for( int i = random, j = 0; j < trans.size() && !isPossible; i++, j++) {
+				
 				if( trans.get(i% trans.size()).isPossible()) {
 					isPossible = true;
 					trans.get(i%trans.size()).exec();
@@ -34,7 +41,11 @@ public class Simulation {
 		System.out.println("The simulation has finished...");
 	}
 	
-	public void addArc( int weight,Place pl) {
+	public void runOneTransition( Transition t) {
+		t.exec();
+	}
+	
+	public void addArc( int weight,Place pl) throws InvalidValueArc  {
 		arcs.add(new Arc(weight,pl));
 	}
 	public void addPlace( int numJeton) {
@@ -42,6 +53,24 @@ public class Simulation {
 	}
 	public void addTransition( Transition tr) {
 		trans.add( tr);
+	}
+	
+	public void removeArc( Arc arc) {
+		arcs.remove(arc);
+	}
+	public void removePlace( Place place) {
+		places.remove(place);
+	}
+	public void removeTransition( Transition tran) {
+		trans.remove(tran);
+	}
+	
+	
+	@Override
+	public String toString() {
+		String desc = "";
+		for ( Transition t : trans) desc += t.toString() ;
+		return desc;
 	}
 	
 	public void runSpecificTransition( ) {}
