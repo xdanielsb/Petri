@@ -22,4 +22,8 @@ public class Arc {
 	public void setP(Place p) {
 		this.p = p;
 	}
+	
+	public boolean isCrossable() {
+		return this.value<this.p.getNumJetons();
+	}
 }

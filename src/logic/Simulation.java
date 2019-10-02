@@ -22,11 +22,11 @@ public class Simulation {
 		boolean isPossible;
 		do {
 			isPossible = false;
-			for( int i = 0; i < trans.size(); i++) {
-				
-				if( trans.get(i).isPossible()) {
+			int random = (int) Math.random()*trans.size() ;
+			for( int i = random, j = 0; j < trans.size() && !isPossible; i++, j++) {
+				if( trans.get(i% trans.size()).isPossible()) {
 					isPossible = true;
-					trans.get(i).exec();
+					trans.get(i%trans.size()).exec();
 				}
 			}
 		}
@@ -34,11 +34,11 @@ public class Simulation {
 		System.out.println("The simulation has finished...");
 	}
 	
-	public void addArc( Arc arc) {
-		arcs.add(arc);
+	public void addArc( int weight,Place pl) {
+		arcs.add(new Arc(weight,pl));
 	}
-	public void addPlace( Place plc) {
-		places.add(plc);
+	public void addPlace( int numJeton) {
+		places.add(new Place(numJeton));
 	}
 	public void addTransition( Transition tr) {
 		trans.add( tr);

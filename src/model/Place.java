@@ -8,7 +8,11 @@ public class Place {
 	public int getNumJetons() {
 		return numJetons;
 	}
-	public void setNumJetons(int numJetons) {
-		this.numJetons = numJetons;
+	public void increaseJeton(int numJetons) {
+		this.numJetons += numJetons;
 	}
+	public void decreaseJeton(int numJetons) {
+		this.numJetons -= numJetons;
+	}
+	
 }
