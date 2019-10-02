@@ -26,11 +26,17 @@ public class Transition {
 		return flag;
 	}
 	public void exec() {
-		if( isPossible()) {
-			for( int i = 0; i < input.size(); i++)
-				input.get(i).getP().decreaseJeton(input.get(i).getValue());
-			for( int i = 0; i < output.size(); i++) 
-				output.get(i).getP().increaseJeton(output.get(i).getValue());
+		boolean isPo = this.isPossible();
+		if( isPo ) {
+			for( int i = 0; i < input.size(); i++) {
+				int weight = input.get(i).getValue();
+				input.get(i).getP().decreaseJeton(weight);
+			}
+			for( int i = 0; i < output.size(); i++) {
+				int weight = output.get(i).getValue();
+				output.get(i).getP().increaseJeton(weight);
+			}
+				
 		}else {
 			System.out.println( "Hey!, It is not possible to exec this transition.");
 		}
