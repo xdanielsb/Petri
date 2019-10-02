@@ -24,6 +24,14 @@ public class Launcher {
 		t1.addInput( a2 );
 		t1.addOutput( a3 );
 		
+		
+		//Simmulation
+		Simulation s = new Simulation();
+		s.addTransition(t1);
+		
+		// Start
+		s.start();
+		
 	}
 	
 }

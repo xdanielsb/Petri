@@ -21,19 +21,21 @@ public class Transition {
 	public boolean isPossible() {
 		boolean flag = true; 
 		for( int i = 0; i< input.size() && flag; i++) {
-			if( this.input.get(i).getValue() > this.input.get(i).getP().getNumJetons()  ) 
-				flag = false; 
+			int jetons = this.input.get(i).getP().getNumJetons();
+			int cost = this.input.get(i).getValue(); 
+			if(  cost > jetons  ) {
+				flag = false;
+			}
+				 
 		}
 		return flag;
 	}
 	public void exec() {
 		if( isPossible()) {
-			for( Arc arc: input) {
-				arc.getP().setNumJetons(arc.getP().getNumJetons()-arc.getValue());
-			}
-			for( Arc arc: output) {
-				arc.getP().setNumJetons(arc.getP().getNumJetons()+arc.getValue());
-			}
+			for( int i = 0; i < input.size(); i++)
+				input.get(i).getP().setNumJetons(input.get(i).getP().getNumJetons()-input.get(i).getValue());
+			for( int i = 0; i < output.size(); i++) 
+				output.get(i).getP().setNumJetons(output.get(i).getP().getNumJetons()+output.get(i).getValue());
 		}else {
 			System.out.println( "Hey!, It is not possible to exec this transition.");
 		}

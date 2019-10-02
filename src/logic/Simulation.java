@@ -13,10 +13,17 @@ public class Simulation {
 	private ArrayList< Place> places;
 	private ArrayList < Transition> trans;
 	
+	public Simulation() {
+		trans = new ArrayList<>();
+	}
+	
 	public void start() {
-		boolean isPossible =false;
+		System.out.println("The simulation has started...");
+		boolean isPossible;
 		do {
+			isPossible = false;
 			for( int i = 0; i < trans.size(); i++) {
+				
 				if( trans.get(i).isPossible()) {
 					isPossible = true;
 					trans.get(i).exec();
@@ -24,6 +31,17 @@ public class Simulation {
 			}
 		}
 		while( isPossible );
+		System.out.println("The simulation has finished...");
+	}
+	
+	public void addArc( Arc arc) {
+		arcs.add(arc);
+	}
+	public void addPlace( Place plc) {
+		places.add(plc);
+	}
+	public void addTransition( Transition tr) {
+		trans.add( tr);
 	}
 	
 	public void runSpecificTransition( ) {}
