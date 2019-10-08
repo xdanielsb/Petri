@@ -13,7 +13,7 @@ public class SimulateNet {
 		net = _net;
 	}
 	
-	public void runAllTransitions() {
+	public void run() {
 		System.out.println("The simulation has started...");
 		System.out.println("The initial Petri Net is : ");
 		System.out.println(net.toString());

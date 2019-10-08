@@ -1,11 +1,21 @@
 package logic;
 import model.*;
+
 /**
- * @author Daniel Santos and Guillem Sanyas
- * Represent and Simulate a Petri Network
- */
+* <h1>Simulator Petri Networks</h1>
+* Represent and Simulate a Petri Network
+*
+* @author  Daniel Santos and Guillem Sanyas
+* @version 1.0
+* @since   2019-10-08 
+*/
 public class Launcher {
 	
+   /**
+   * This is the main method which makes use of SimulateNet
+   * @param args Unused.
+   * @return Nothing.
+   */
 	public static void main( String args[] ) {
 		
 		/* Define the elements of the Petri Net */
@@ -56,18 +66,7 @@ public class Launcher {
 		
 		// Simulate a Network
 		SimulateNet simulator = new SimulateNet(net);
-		simulator.runAllTransitions();
-
-		// run all Transitions 
-		//s.runAllTransitions();
-		
-		// run an specific transition
-		//s.runOneTransition(t1);
-		
-		// modify a place
-		//p1.increaseJeton(10);
-		
-
+		simulator.run();
 		
 	}
 	
