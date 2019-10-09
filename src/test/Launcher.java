@@ -1,4 +1,6 @@
-package logic;
+package test;
+import logic.InvalidValueArc;
+import logic.SimulateNet;
 import model.*;
 
 /**
