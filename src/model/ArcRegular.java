@@ -1,7 +1,13 @@
 package model;
 
 import logic.InvalidValueArc;
-
+/**
+* 
+* Concret type of Arc, represents a normal edge 
+* whose default value is equals to one
+* 
+* @author  Daniel Santos and Guillem Sanyas
+*/
 public class ArcRegular extends Arc{
 	private int value;
 	
@@ -16,6 +22,7 @@ public class ArcRegular extends Arc{
 			throw new InvalidValueArc();
 		}
 	}
+	/** setters and getters */
 	public int getValue() {
 		return value;
 	}
@@ -23,14 +30,23 @@ public class ArcRegular extends Arc{
 		this.value = value;
 	}
 	
+	
 	public boolean isCrossable() {
 		return this.value <= this.getP().getNumJetons();
 	}
 	
+	/**
+	 * Function who increase the number of Jetons
+	 * @return void
+	 */
 	public void add() {
 		this.getP().increaseJeton(this.getValue());
 	}
-	
+
+	/**
+	 * Function who decreasethe number of Jetons
+	 * @return void
+	 */
 	public void remove() {
 		this.getP().decreaseJeton(this.getValue());
 	}

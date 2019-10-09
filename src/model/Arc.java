@@ -1,5 +1,11 @@
 package model;
-
+/**
+* 
+* Abstract class that represents an Arc,
+* simulate a connection between a Place and a a Transition
+* 
+* @author  Daniel Santos and Guillem Sanyas
+*/
 public abstract class Arc {
 	 private Place p;
 
@@ -15,6 +21,11 @@ public abstract class Arc {
 		this.p = p;
 	}
 	
+	/**
+	 * Method that check if is possible to execute a change 
+	 * given the weight of the Arc and the Place
+	 * @return boolean
+	 */
 	public abstract boolean isCrossable();
 	
 	public abstract void remove();
