@@ -7,6 +7,7 @@ import logic.InvalidValueArc;
 * whose default value is equals to one
 * 
 * @author  Daniel Santos and Guillem Sanyas
+* @see Arc
 */
 public class ArcRegular extends Arc{
 	private int value;

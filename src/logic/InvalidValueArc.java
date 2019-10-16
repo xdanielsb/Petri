@@ -11,5 +11,4 @@ public class InvalidValueArc extends Exception{
 		String msg = "The value of the Arc must be positive.";
 		return msg;
 	}
-
 }

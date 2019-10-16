@@ -1,7 +1,13 @@
 package model;
 
 import java.util.ArrayList;
-
+/**
+ * 
+ * @author xdanielsb et gsanyas
+ * @version 1.0
+ * Class that represents a transition
+ *
+ */
 public class Transition {
 	
 	private ArrayList< Arc > input; 
@@ -25,6 +31,11 @@ public class Transition {
 		}
 		return flag;
 	}
+	
+	/**
+	 * 	Method that runs a transition
+	 *  @return void
+	 */
 	public void exec() {
 		boolean isPo = this.isPossible();
 		if( isPo ) {

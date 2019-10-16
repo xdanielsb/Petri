@@ -7,12 +7,16 @@ package model;
 * @author  Daniel Santos and Guillem Sanyas
 */
 public abstract class Arc {
-	 private Place p;
+	/**
+	 * Attribute p: Place, the place that is connected to the arc
+	 */
+	private Place p;
 
 	public Arc(Place p) {
 		this.p = p;
 	}
 
+	/** getters and setters for place*/
 	public Place getP() {
 		return p;
 	}
@@ -22,12 +26,16 @@ public abstract class Arc {
 	}
 	
 	/**
-	 * Method that check if is possible to execute a change 
+	 * Method that checks if is possible to execute a change 
 	 * given the weight of the Arc and the Place
 	 * @return boolean
 	 */
 	public abstract boolean isCrossable();
 	
+	/**
+	 * Method that remove jetons from the connected place 
+	 * @return void
+	 */
 	public abstract void remove();
 
 }

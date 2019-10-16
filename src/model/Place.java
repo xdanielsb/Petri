@@ -1,5 +1,11 @@
 package model;
-
+/**
+ * 
+ * @author xdanielsb et gsanyas
+ * @version 1.0
+ * Class that represents a Place 
+ *
+ */
 public class Place {
 	private int numJetons;
 	public Place( int _numJetons) {

@@ -11,7 +11,7 @@ import model.*;
  *
  */
 public class PetriNet implements IConstructNet{
-	private ArrayList< ArcRegular> arcs;
+	private ArrayList< Arc> arcs;
 	private ArrayList< Place> places;
 	private ArrayList < Transition> trans;
 	
@@ -20,7 +20,10 @@ public class PetriNet implements IConstructNet{
 		arcs = new ArrayList<>();
 		places = new ArrayList<>();
 	}
-		
+	/**
+	 * Get all transition that are crossable
+	 * @return
+	 */
 	public ArrayList< Transition > getPossibleTransitions() {
 		ArrayList< Transition > possibles = new ArrayList<>();
 		for (Transition t : trans) 
@@ -32,7 +35,7 @@ public class PetriNet implements IConstructNet{
 		t.exec();
 	}
 	@Override
-	public void addArc(ArcRegular a) {
+	public void addArc(Arc a) {
 		arcs.add(a);
 	}
 	@Override
@@ -44,7 +47,7 @@ public class PetriNet implements IConstructNet{
 		trans.add( tr);
 	}
 	@Override
-	public void removeArc( ArcRegular arc) {
+	public void removeArc( Arc arc) {
 		arcs.remove(arc);
 	}
 	@Override

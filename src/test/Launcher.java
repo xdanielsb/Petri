@@ -44,13 +44,13 @@ public class Launcher {
 			System.exit(0);
 		}
 		
-		/** Add the arcs to the transition**/	
+		/** Add arcs to the transition**/	
 		t1.addInput( a1 );
 		t1.addInput( a2 );
 		t1.addOutput( a3 );
 		
 		
-		/** Add the elements to the Petri Net **/
+		/** Add elements to the Petri Net **/
 		net.addArc(a1);
 		net.addArc(a2);
 		net.addArc(a3);

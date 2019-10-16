@@ -1,5 +1,9 @@
 package model;
-
+/**
+* Class that represents a special Arc whose is crossable,
+* if the number of jetons in the place is equal to zero.
+ * @see Arc
+ */
 public class ArcZero extends Arc{
 
 	public ArcZero(Place _p) {
