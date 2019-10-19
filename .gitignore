@@ -1,1 +1,4 @@
 /bin
+/bin/model/*.class
+*.class
+*.swp
