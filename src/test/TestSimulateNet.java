@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import logic.InvalidValueArc;
+import logic.Logger;
 import logic.SimulateNet;
 import model.Arc;
 import model.ArcRegular;
@@ -51,7 +52,7 @@ class TestSimulateNet {
 			a3 = new ArcRegular( 1, p3);
 			b3 = new ArcRegular( 1, p6);
 		}catch (InvalidValueArc e) {
-			System.err.println(e.getMessage());
+			Logger.getLogger().log(e.getMessage());
 			fail("Not yet implemented");
 		}
 		
