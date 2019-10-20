@@ -62,7 +62,10 @@ public class PetriNet implements IConstructNet{
 	@Override
 	public String toString() {
 		String desc = "";
-		for ( Transition t : trans) desc += t.toString() ;
+		for( int i =0; i< trans.size(); i++) {
+			desc +="\t\t------ Transition # "+(i+1)+" ------\n";
+			desc += trans.get(i);
+		}
 		return desc;
 	}
 	

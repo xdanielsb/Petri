@@ -56,16 +56,17 @@ public class Transition {
 	}
 	@Override
 	public String toString() {
-		String desc, in="  In  = [\n", out="  Out = [\n";
+		String desc, in="\t\t  In  : [\n", out="\t\t  Out : [\n";
 		for( int i = 0; i < input.size(); i++) {
 			if( i > 0 ) in+=",\n";
-			in += "\t\t"+ input.get(i);
+			in += "\t\t\t "+ input.get(i);
 		}
-		in += "        ]\n";
+		in += "\n\t\t        ]\n";
 		for( int i = 0; i < output.size(); i++) {
-			out += "\t\t"+ output.get(i)+"\n";
+			if( i > 0 ) out+=",\n";
+			out += "\t\t\t "+ output.get(i);
 		}
-		out += "        ]\n";
+		out += "\n\t\t        ]\n";
 		desc = in + out;
 		return desc;
 	}
