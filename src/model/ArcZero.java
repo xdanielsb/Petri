@@ -16,5 +16,9 @@ public class ArcZero extends Arc{
 	public void remove() {
 		// does not change any state
 	}
-
+	@Override
+	public String toString() {
+		String str = "(j = "+this.getP().getNumJetons() +")";
+		return str;
+	}
 }

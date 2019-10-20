@@ -18,4 +18,9 @@ public class ArcCleaner extends Arc{
 	public void remove() {
 		this.getP().setNumJetons(0);
 	}
+	@Override
+	public String toString() {
+		String str = "(j = "+this.getP().getNumJetons() +")";
+		return str;
+	}
 }

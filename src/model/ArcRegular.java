@@ -53,7 +53,7 @@ public class ArcRegular extends Arc{
 	}
 	@Override
 	public String toString() {
-		String str = "( weight= "+value +"  jetons= "+this.getP().getNumJetons() +")";
+		String str = "(w = "+value +",  j = "+this.getP().getNumJetons() +")";
 		return str;
 	}
 }

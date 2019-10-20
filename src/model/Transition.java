@@ -11,6 +11,10 @@ import java.util.ArrayList;
 public class Transition {
 	
 	private ArrayList< Arc > input; 
+	/**
+	 * A list that represents the output ars, the 
+	 * only type of arcs output are type regular
+	 */
 	private ArrayList< ArcRegular > output;
 	
 	public Transition() {
@@ -52,11 +56,16 @@ public class Transition {
 	}
 	@Override
 	public String toString() {
-		String desc, in="Input [  ", out="Output = [";
-		for( Arc arc: input) in += arc.toString();
-		in += "]\n";
-		for( ArcRegular arc: output) out += arc.toString();
-		out += "]\n";
+		String desc, in="  In  = [\n", out="  Out = [\n";
+		for( int i = 0; i < input.size(); i++) {
+			if( i > 0 ) in+=",\n";
+			in += "\t\t"+ input.get(i);
+		}
+		in += "        ]\n";
+		for( int i = 0; i < output.size(); i++) {
+			out += "\t\t"+ output.get(i)+"\n";
+		}
+		out += "        ]\n";
 		desc = in + out;
 		return desc;
 	}

@@ -1,5 +1,6 @@
 package test;
 import logic.InvalidValueArc;
+
 import logic.SimulateNet;
 import model.*;
 
@@ -24,7 +25,8 @@ public class Launcher {
 		PetriNet net = new PetriNet();
 		Place p1, p2, p3;
 		Transition t1;
-		ArcRegular a1 = null, a2=null, a3 =null;
+		Arc a1 = null, a2=null;
+		ArcRegular a3 =null;
 		
 		/** Instance the elements **/
 		p1 = new Place( 2 );
@@ -45,7 +47,6 @@ public class Launcher {
 		}
 		
 		/** Add arcs to the transition**/	
-		t1.addInput( a1 );
 		t1.addInput( a2 );
 		t1.addOutput( a3 );
 		

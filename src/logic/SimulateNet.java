@@ -2,7 +2,6 @@ package logic;
 import java.util.ArrayList;
 import model.PetriNet;
 import model.Transition;
-
 /**
 * 
 * Logic to simulate the behaviour of a PetriNet
@@ -27,13 +26,17 @@ public class SimulateNet {
 	 * PetriNet during the simulation  
 	 */
 	public void run() {
-		System.out.println("The simulation has started...");
-		System.out.println("The initial Petri Net is : ");
+		System.out.println("----- The simulation has started. ------\n");
+		System.out.println("\t------- Notation -------" );
+		System.out.println("\t  w = weight arc" );
+		System.out.println("\t  j = # jettons of the place connected to that arc \n" );
+		
+		System.out.println(" \t------- Initial Configuration  Net: \n");
+		
 		System.out.println(net.toString());
-		int step = 1;
 		ArrayList<Transition> trans = net.getPossibleTransitions();
-		while( trans.size() > 0 ) {
-			System.out.println("------------------------------- Step " + step + " ----------------------" );
+		for( int step = 1; trans.size() > 0; step++ ) {
+			System.out.println("\t------- Step " + step + " -------" );
 			int random = (int) Math.random()*(trans.size()-1);
 			trans.get(random).exec();
 			trans = net.getPossibleTransitions();
