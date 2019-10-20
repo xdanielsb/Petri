@@ -1,6 +1,8 @@
 package model;
 
 import java.util.ArrayList;
+
+import logic.InvalidJetonsNumber;
 /**
  * 
  * @author xdanielsb et gsanyas
@@ -44,7 +46,11 @@ public class Transition {
 		boolean isPo = this.isPossible();
 		if( isPo ) {
 			for( int i = 0; i < input.size(); i++) {
-				input.get(i).remove();
+				try {
+					input.get(i).remove();
+				} catch (InvalidJetonsNumber e) {
+					// tested a priori
+				}
 			}
 			for( int i = 0; i < output.size(); i++) {
 				output.get(i).add();

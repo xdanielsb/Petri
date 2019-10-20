@@ -1,6 +1,6 @@
 package logic;
 /**
- * Singleton class with lazy inicialization
+ * Singleton class with lazy initialization
  * @author  Daniel Santos and Guillem Sanyas
  */
 public class Logger {

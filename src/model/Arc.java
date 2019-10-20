@@ -1,4 +1,7 @@
 package model;
+
+import logic.InvalidJetonsNumber;
+
 /**
 * 
 * Abstract class that represents an Arc,
@@ -36,6 +39,6 @@ public abstract class Arc {
 	 * Method that remove jetons from the connected place 
 	 * @return void
 	 */
-	public abstract void remove();
+	public abstract void remove() throws InvalidJetonsNumber;
 
 }
