@@ -5,7 +5,7 @@ import java.util.Collections;
 import model.*;
 /**
  * 
- * @author xdanielsb et gsanyas
+ * @author Daniel Santos and Guillem Sanyas
  * @version 1.0
  * This project simulates a  configurable network of Petri 
  *

@@ -1,7 +1,7 @@
 package model;
 /**
  * 
- * @author xdanielsb et gsanyas
+ * @author Daniel Santos and Guillem Sanyas
  * @version 1.0
  * Class that represents a Place 
  *

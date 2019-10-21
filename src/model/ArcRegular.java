@@ -1,5 +1,6 @@
 package model;
 
+import logic.InvalidJetonsNumber;
 import logic.InvalidValueArc;
 /**
 * 
@@ -48,8 +49,12 @@ public class ArcRegular extends Arc{
 	 * Function who decreasethe number of Jetons
 	 * @return void
 	 */
-	public void remove() {
-		this.getP().decreaseJeton(this.getValue());
+	public void remove() throws InvalidJetonsNumber{
+		if (! this.isCrossable()) {
+			throw new InvalidJetonsNumber();
+		} else {
+			this.getP().decreaseJeton(this.getValue());
+		}
 	}
 	@Override
 	public String toString() {
