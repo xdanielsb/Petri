@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import logic.InvalidJetonsNumber;
 /**
  * 
- * @author xdanielsb et gsanyas
+ * @author Daniel Santos and Guillem Sanyas
  * @version 1.0
  * Class that represents a transition
  *

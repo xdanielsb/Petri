@@ -1,7 +1,7 @@
 package model;
 /**
  * 
- * @author xdanielsb et gsanyas
+ * @author Daniel Santos and Guillem Sanyas
  *  Interface that specify the contracts for building or modifying the Petri Net
  */
 public interface IConstructNet {
