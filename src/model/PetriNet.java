@@ -26,6 +26,7 @@ public class PetriNet implements IConstructNet{
 	 */
 	public ArrayList< Transition > getPossibleTransitions() {
 		ArrayList< Transition > possibles = new ArrayList<>();
+		
 		for (Transition t : trans) 
 			if(t.isPossible()) possibles.add(t);
 		return possibles;

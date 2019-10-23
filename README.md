@@ -3,6 +3,11 @@
 ## Description
 This project implements the logit to run a Petri Net
 
+## Models
+
+<img src="models/static.png" />
+
+
 ## How to run? 
 
 ### In Eclipse
@@ -17,5 +22,7 @@ To launch a complete automatic (random) simulation example, simply run the file 
 
 ## Authors
 Daniel Santos and Guillem Sanyas
+
+
 
 
