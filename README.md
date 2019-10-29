@@ -7,6 +7,7 @@ This project implements the logit to run a Petri Net
 
 <img src="models/static.png" />
 
+#### Note: the associations  PetriNet --> Place and PetriNet --> Arc, are not used, however help to clarify the model
 
 ## How to run? 
 
