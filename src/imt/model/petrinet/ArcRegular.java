@@ -1,4 +1,4 @@
-package model;
+package imt.model.petrinet;
 
 import logic.InvalidJetonsNumber;
 import logic.InvalidValueArc;

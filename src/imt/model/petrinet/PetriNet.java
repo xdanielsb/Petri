@@ -1,8 +1,8 @@
-package model;
+package imt.model.petrinet;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import model.*;
+import imt.model.petrinet.*;
 /**
  * 
  * @author Daniel Santos and Guillem Sanyas

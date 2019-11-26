@@ -1,4 +1,4 @@
-package model;
+package imt.model.petrinet;
 /**
 * 
 * Concret type of Arc, whose behaviour is:

@@ -1,4 +1,4 @@
-package model;
+package imt.model.petrinet;
 /**
  * 
  * @author Daniel Santos and Guillem Sanyas
