@@ -6,8 +6,8 @@ package model;
  */
 public class ArcZero extends Arc{
 
-	public ArcZero(Place _p) {
-		super(_p);
+	public ArcZero(Place _p, Transition t) {
+		super(_p, t , true);
 	}
 	public boolean isCrossable() {
 		return this.getP().getNumJetons()==0;

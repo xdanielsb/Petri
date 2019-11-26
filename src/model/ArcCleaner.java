@@ -8,8 +8,8 @@ package model;
 * @see Arc
 */
 public class ArcCleaner extends Arc{
-	public ArcCleaner(Place p,Transition t,boolean inTransition) {
-		super(p,t,inTransition);
+	public ArcCleaner(Place p,Transition t) {
+		super(p,t,true);
 	}
 	public boolean isCrossable() {
 		return this.getP().getNumJetons()>=1;

@@ -42,15 +42,16 @@ class TestSimulateNet {
 		t1 = new Transition( );
 		t2 = new Transition( );
 		
+		
 		try {
 			/**inputs**/
-			a1 = new ArcRegular( 1, p1);
-			a2 = new ArcRegular( 2, p2);
-			b1 = new ArcRegular( 1, p4);
-			b2 = new ArcRegular( 2, p5);
+			a1 = new ArcRegular( p1,t1,true, 1);
+			a2 = new ArcRegular( p2,t1,true, 2);
+			b1 = new ArcRegular( p3,t1,true, 1);
+			b2 = new ArcRegular( p4,t1,true, 2);
 			/**outputs**/
-			a3 = new ArcRegular( 1, p3);
-			b3 = new ArcRegular( 1, p6);
+			a3 = new ArcRegular( p3, t1,false, 1);
+			b3 = new ArcRegular(p6, t1,false, 1);
 		}catch (InvalidValueArc e) {
 			Logger.getLogger().log(e.getMessage());
 			fail("Not yet implemented");

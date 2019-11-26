@@ -18,10 +18,10 @@ class TestTransition {
 	void setUp() throws Exception {
 		t = new Transition();
 		Place p2 = new Place(2);
-		Arc ac2 = new ArcRegular(p2);
+		Arc ac2 = new ArcRegular(p2, t, true);
 		t.addInput(ac2);
 		Place p3 = new Place(3);
-		ArcRegular ac3 = new ArcRegular(2,p3);
+		ArcRegular ac3 = new ArcRegular(p3, t, false ,2);
 		t.addOutput(ac3);
 	}
 

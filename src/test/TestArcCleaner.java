@@ -6,6 +6,7 @@ package test;
 import static org.junit.jupiter.api.Assertions.*;
 import model.ArcCleaner;
 import model.Place;
+import model.Transition;
 
 import org.junit.jupiter.api.Test;
 
@@ -21,10 +22,11 @@ class TestArcCleaner {
 	@Test
 	void testIsCrossable() {
 		Place p = new Place(4);
-		ArcCleaner ac = new ArcCleaner(p);
+		Transition t1 = new Transition();
+		ArcCleaner ac = new ArcCleaner(p, t1);
 		assertTrue(ac.isCrossable());
 		p = new Place(0);
-		ac = new ArcCleaner(p);
+		ac = new ArcCleaner(p, t1);
 		assertFalse(ac.isCrossable());
 	}
 
@@ -34,7 +36,8 @@ class TestArcCleaner {
 	@Test
 	void testRemove() {
 		Place p = new Place(6);
-		ArcCleaner ac = new ArcCleaner(p);
+		Transition t1 = new Transition();
+		ArcCleaner ac = new ArcCleaner(p, t1);
 		ac.remove();
 		assertEquals(0,p.getNumJetons());
 	}

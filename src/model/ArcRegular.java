@@ -13,12 +13,12 @@ import logic.InvalidValueArc;
 public class ArcRegular extends Arc{
 	private int value;
 	
-	public ArcRegular(Place _p) {
-		super(_p);
+	public ArcRegular(Place _p, Transition t, boolean inTransition) {
+		super(_p, t, inTransition);
 		this.value = 1;
 	}
-	public ArcRegular(int _value, Place _p) throws InvalidValueArc {
-		super(_p);
+	public ArcRegular(Place _p, Transition t, boolean inTransition, int _value) throws InvalidValueArc {
+		super(_p, t, inTransition);
 		this.value = _value;
 		if (_value <= 0) {
 			throw new InvalidValueArc();
